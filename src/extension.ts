@@ -16,7 +16,15 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const searchPath = `${findRootDir(activeFilePath)}/`.replace(
+      const rootPath = findRootDir(activeFilePath);
+
+      if (!rootPath) {
+        vscode.commands.executeCommand("workbench.action.quickOpen");
+
+        return;
+      }
+
+      const searchPath = `${rootPath}/`.replace(
         `${workspaceFolder.uri.fsPath}/`,
         "",
       );

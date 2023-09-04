@@ -1,6 +1,6 @@
 # QuickOpen Workspace
 
-This is a sample extension that shows the QuickInput UI and usage of the QuickInput API.
+This is a simple extension that open `Quick access` menu with predefined workspace path.
 
 It is not intended as a production quality extension.
 
@@ -10,23 +10,17 @@ It is not intended as a production quality extension.
 
 ## Demo
 
-![Multi-step sample](https://raw.githubusercontent.com/Microsoft/vscode-extension-samples/main/quickinput-sample/preview.gif)
+![Multi-step sample](https://raw.githubusercontent.com/Dwlad90/vscode-quickopen-workspace/master/preview.gif)
 
 ## How it works
 
-- The extension uses the [`QuickPick`](https://code.visualstudio.com/api/references/vscode-api#QuickPick) and [`InputBox`](https://code.visualstudio.com/api/references/vscode-api#InputBox) API to show a UI for user input.
-- Registers a command via `package.json` that will trigger the quick input
+The extension uses the [`workbench.action.quickOpen`](https://code.visualstudio.com/api/references/commands) command to suggest a files.
 
 ## VS Code API
 
 ### `vscode` module
 
-- [`QuickPick`](https://code.visualstudio.com/api/references/vscode-api#QuickPick)
-- [`InputBox`](https://code.visualstudio.com/api/references/vscode-api#InputBox)
-- [`window.createQuickPick`](https://code.visualstudio.com/api/references/vscode-api#window.createQuickPick)
-- [`window.showQuickPick`](https://code.visualstudio.com/api/references/vscode-api#window.showQuickPick)
-- [`window.createInputBox`](https://code.visualstudio.com/api/references/vscode-api#window.createInputBox)
-- [`window.showInputBox`](https://code.visualstudio.com/api/references/vscode-api#window.showInputBox)
+- [`workbench.action.quickOpen`](https://code.visualstudio.com/api/references/commands)
 
 # How to run locally
 

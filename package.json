@@ -1,46 +1,51 @@
 {
-	"name": "quick-open-workspace",
-	"displayName": "Quick Open Workspace",
-	"description": "Quick Open Workspace",
-	"version": "0.1.0",
-	"publisher": "dwlad90",
-	"private": true,
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Dwlad90/vscode-quickopen-workspace"
-	},
-	"engines": {
-		"vscode": "^1.73.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"main": "./out/extension.js",
-
-	"activationEvents": [
-		"onCommand:quickOpen.workspace"
-	],
-	"contributes": {
-		"commands": [
-			{
-				"command": "quickOpen.workspace",
-				"title": "Quick Open Workspace"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint \"src/**/*.ts\"",
-		"watch": "tsc -watch -p ./"
-	},
-	"devDependencies": {
-		"@types/node": "^16.18.34",
-		"@types/vscode": "^1.73.0",
-		"@typescript-eslint/eslint-plugin": "^5.42.0",
-		"@typescript-eslint/parser": "^5.42.0",
-		"eslint": "^8.26.0",
-		"typescript": "^5.1.3"
-	}
+  "name": "quick-open-workspace",
+  "displayName": "Quick Open Workspace",
+  "description": "Quick Open Workspace",
+  "version": "0.1.0",
+  "publisher": "dwlad90",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dwlad90/vscode-quickopen-workspace"
+  },
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:quickOpen.workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickOpen.workspace",
+        "title": "Quick Open Workspace"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "alt+shift+p",
+        "mac": "ctrl+shift+p",
+        "command": "quickOpen.workspace"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.1.3"
+  }
 }
