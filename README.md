@@ -1,12 +1,10 @@
 # QuickOpen Workspace
 
-This is a simple extension that open `Quick access` menu with predefined workspace path.
-
-It is not intended as a production quality extension.
+This is a simple extension that opens `Quick access` menu with predefined workspace path.
 
 - Open the command palette
-- Run "Quick Input Samples"
-- Pick one of the samples and see it run
+- Run "Quick Open Presets"
+- Pick one of the presets and see it run
 
 ## Demo
 
@@ -14,7 +12,7 @@ It is not intended as a production quality extension.
 
 ## How it works
 
-The extension uses the [`workbench.action.quickOpen`](https://code.visualstudio.com/api/references/commands) command to suggest a files.
+The extension uses the [`workbench.action.quickOpen`](https://code.visualstudio.com/api/references/commands) command to suggest files.
 
 ## VS Code API
 
