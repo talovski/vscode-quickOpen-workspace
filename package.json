@@ -1,9 +1,13 @@
 {
-  "name": "quick-open-workspace",
-  "displayName": "Quick Open Workspace",
-  "description": "Quick Open Workspace",
-  "version": "0.1.0",
+  "name": "monorepo-navigator",
+  "displayName": "Monorepo Navigator",
+  "description": "Commands for navigation in monorepos",
+  "version": "0.2.0",
   "publisher": "dwlad90",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,22 +19,24 @@
   "categories": [
     "Other"
   ],
+  "icon": "icon.png",
   "main": "./out/extension.js",
-  "activationEvents": [
-    "onCommand:quickOpen.workspace"
-  ],
   "contributes": {
     "commands": [
       {
-        "command": "quickOpen.workspace",
-        "title": "Quick Open Workspace"
+        "command": "monorepoNavigator.quickOpen",
+        "title": "Monorepo Navigator: Quick Open a file in relative workspace"
+      },
+      {
+        "command": "monorepoNavigator.findInFiles",
+        "title": "Monorepo Navigator: Find in files in relative workspace"
       }
     ],
     "keybindings": [
       {
         "key": "alt+shift+p",
         "mac": "ctrl+shift+p",
-        "command": "quickOpen.workspace"
+        "command": "monorepoNavigator.quickOpen"
       }
     ]
   },
